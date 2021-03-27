@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Alert as RBCAlert } from "react-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Alert.css";
 
 const Alert = (props) => {
   const { keyOverride, variantOverride, bodyContent } = props;
 
   return (
-    <div
-      key={keyOverride}
-      class={`react-rbc-alert alert alert-${variantOverride}`}
-      role='alert'
-    >
-      {bodyContent}
+    <div className='react-rbc-alert'>
+      <RBCAlert key={keyOverride} variant={variantOverride}>
+        {bodyContent}
+      </RBCAlert>
     </div>
   );
 };
