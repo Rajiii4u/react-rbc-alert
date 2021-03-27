@@ -6,11 +6,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Alert.css";
 
 const Alert = (props) => {
-  const { keyOverride, variantOverride, bodyContent } = props;
+  const {
+    keyOverride,
+    variantOverride,
+    showHeader,
+    headerContent,
+    bodyContent,
+    showDismissible,
+    showAlert,
+    handleOnClose
+  } = props;
 
   return (
     <div className='react-rbc-alert'>
-      <RBCAlert key={keyOverride} variant={variantOverride}>
+      <RBCAlert
+        key={keyOverride}
+        variant={variantOverride}
+        dismissible={showDismissible}
+        show={showAlert}
+        onClose={handleOnClose}
+      >
+        {showHeader && <RBCAlert.Heading>{headerContent}</RBCAlert.Heading>}
         {bodyContent}
       </RBCAlert>
     </div>
@@ -29,13 +45,23 @@ Alert.prototype = {
     "light",
     "dark"
   ]),
-  bodyContent: PropTypes.string
+  showHeader: PropTypes.bool,
+  headerContent: PropTypes.string,
+  bodyContent: PropTypes.string,
+  showDismissible: PropTypes.bool,
+  showAlert: PropTypes.bool,
+  handleOnClose: PropTypes.func
 };
 
 Alert.defaultProps = {
   keyOverride: 0,
   variantOverride: "primary",
-  bodyContent: ""
+  showHeader: false,
+  headerContent: "",
+  bodyContent: "",
+  showDismissible: false,
+  showAlert: false,
+  handleOnClose: () => null
 };
 
 export default Alert;
