@@ -1,4 +1,4 @@
-import { Alert } from "./components";
+import React from "react";
 
 function App() {
   return (
@@ -6,7 +6,6 @@ function App() {
       <div>
         Run the following command to install the package.
         <pre>npm install react-rbc-alert</pre>
-        <Alert bodyContent='test-alert' />
       </div>
     </div>
   );
