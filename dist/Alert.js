@@ -8,24 +8,42 @@ const Alert = props => {
   const {
     keyOverride,
     variantOverride,
-    bodyContent
+    showHeader,
+    headerContent,
+    bodyContent,
+    showDismissible,
+    showAlert,
+    handleOnClose
   } = props;
   return /*#__PURE__*/React.createElement("div", {
     className: "react-rbc-alert"
   }, /*#__PURE__*/React.createElement(RBCAlert, {
     key: keyOverride,
-    variant: variantOverride
-  }, bodyContent));
+    variant: variantOverride,
+    dismissible: showDismissible,
+    show: showAlert,
+    onClose: handleOnClose
+  }, showHeader && /*#__PURE__*/React.createElement(RBCAlert.Heading, null, headerContent), bodyContent));
 };
 
 Alert.prototype = {
   keyOverride: PropTypes.number,
   variantOverride: PropTypes.oneOf(["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]),
-  bodyContent: PropTypes.string
+  showHeader: PropTypes.bool,
+  headerContent: PropTypes.string,
+  bodyContent: PropTypes.string,
+  showDismissible: PropTypes.bool,
+  showAlert: PropTypes.bool,
+  handleOnClose: PropTypes.func
 };
 Alert.defaultProps = {
   keyOverride: 0,
   variantOverride: "primary",
-  bodyContent: ""
+  showHeader: false,
+  headerContent: "",
+  bodyContent: "",
+  showDismissible: false,
+  showAlert: false,
+  handleOnClose: () => null
 };
 export default Alert;
