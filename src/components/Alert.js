@@ -54,13 +54,13 @@ Alert.prototype = {
 };
 
 Alert.defaultProps = {
+  showAlert: false,
+  showHeader: false,
+  showDismissible: false,
+  bodyContent: "",
+  headerContent: "",
   keyOverride: 0,
   variantOverride: "primary",
-  showHeader: false,
-  headerContent: "",
-  bodyContent: "",
-  showDismissible: false,
-  showAlert: false,
   handleOnClose: () => null
 };
 
