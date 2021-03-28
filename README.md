@@ -16,7 +16,7 @@ yarn add react-rbc-alert
 
 ## Usage
 
-Here is a example of react-rbc=alert being used in React with hooks:
+Here is a example of react-rbc-alert being used in React with hooks:
 
 ```jsx
 import React, { useState } from "react";
