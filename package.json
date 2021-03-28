@@ -1,6 +1,6 @@
 {
   "name": "react-rbc-alert",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "keywords": [
     "react",
     "alert",
@@ -19,9 +19,6 @@
     "dist",
     "README.md"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "bootstrap": "^4.6.0",
     "prop-types": "^15.7.2",
