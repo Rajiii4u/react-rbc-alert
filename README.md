@@ -7,8 +7,9 @@ A React Bootstrap Component - Alert with Minimal Props
 Run the following command to install this package.
 
 ```bash
- # If you use npm:
+# If you use npm:
 npm install react-rbc-alert
+
 # Or if you use Yarn:
 yarn add react-rbc-alert
 ```
