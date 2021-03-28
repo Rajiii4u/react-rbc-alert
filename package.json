@@ -19,6 +19,7 @@
     "dist",
     "README.md"
   ],
+   "publishConfig": {"access": "public"},
   "dependencies": {
     "bootstrap": "^4.6.0",
     "prop-types": "^15.7.2",
